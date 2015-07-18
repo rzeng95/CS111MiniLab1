@@ -1,0 +1,22 @@
+Name: Roland Zeng
+UCLA ID: 204150508
+
+Collaborators: Tuan Office Hours: for exercise 1 & 2
+
+-------------------------------------------------------------------------------
+
+Response to Exercise 1:
+No. run(current) takes into account the earlier line of code where reg_eax gets assigned the value of current's p_pid. schedule() does not do this. See line 145 of mpos_kern.c where 
+"we use %eax for system call return values"
+Hence, because eax register not updated in schedule(), we will not get the correct return result.
+
+
+
+Anything else you'd like us to know:
+There's a bunch of commented out code in mpos_kern.c
+Originally I was working with a helper function exit_process that Tuan helped us implement.
+However, it did not work, so I reverted to older code in EXIT_PROCESS. 
+
+
+Extra credit exercises:
+N/A
